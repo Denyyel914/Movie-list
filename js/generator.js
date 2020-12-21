@@ -35,7 +35,6 @@ function addItem(e) {
     btn.appendChild(document.createTextNode('X'));
     li.className = "list-group-item";
     li.appendChild(btn);
-    // console.log(deleteBtn(btn));
 }
 
 function deleteFields() {
@@ -59,9 +58,6 @@ function deleteItem(e) {
 
 //Show alerts
 function alertShow(message, className) {
-    // error.className = className;
-    // error.appendChild(document.createTextNode(message));
-    // setTimeout(() => document.querySelector('.alert').remove(), 3000);
     const div = document.createElement('div');
     div.className = className; 
     div.appendChild(document.createTextNode(message));
@@ -86,6 +82,5 @@ generate.addEventListener('click', (e) => {
         resultss.innerHTML = (kahon[rands]);
         alertShow('Random item has been picked', 'alert alert-success');
     }
-//   alertShow('Random item has been picked', 'alert alert-success');
 });
 
