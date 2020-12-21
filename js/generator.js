@@ -57,20 +57,35 @@ function deleteItem(e) {
     }
 }
 
+//Show alerts
 function alertShow(message, className) {
-    error.className = className;
-    error.appendChild(document.createTextNode(message));
+    // error.className = className;
+    // error.appendChild(document.createTextNode(message));
+    // setTimeout(() => document.querySelector('.alert').remove(), 3000);
+    const div = document.createElement('div');
+    div.className = className; 
+    div.appendChild(document.createTextNode(message));
+    const header = document.querySelector('#header');
+    const container2 = document.querySelector('#container');
+    container2.insertBefore(div, header);
     setTimeout(() => document.querySelector('.alert').remove(), 3000);
 }
+
 
 //random generator
 generate.addEventListener('click', (e) => {
     var items = document.querySelectorAll("#items li");
-      var kahon = [];
-      for (var j = 0; j < items.length; j++) {
-        kahon.push(items[j].textContent.substr(0, items[j].textContent.length -1));
-      }
-      const rands = Math.floor(Math.random() * kahon.length);
-      resultss.innerHTML = (kahon[rands]);
+    var kahon = [];
+    for (var j = 0; j < items.length; j++) {
+    kahon.push(items[j].textContent.substr(0, items[j].textContent.length -1));
+    }
+    const rands = Math.floor(Math.random() * kahon.length);
+    if(kahon.length == 0 || kahon === undefined) {
+        alertShow('No item can be randomize', 'alert alert-danger');
+    } else {
+        resultss.innerHTML = (kahon[rands]);
+        alertShow('Random item has been picked', 'alert alert-success');
+    }
+//   alertShow('Random item has been picked', 'alert alert-success');
 });
 
