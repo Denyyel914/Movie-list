@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Movie/Tv series list creator
+ User will input his/her desired movie or series until a list is created. Now from the list that has been created, the user has an option to randomly generate 1 movie/series from the list. if the user can't decide which one to watch
